@@ -1,5 +1,5 @@
 //Main List of words
-main_words = ["perotenemospatria"];
+main_words = ["perotenemospatria", "muaja"];
 
 //Evento
 $(function(){
@@ -39,7 +39,6 @@ function replace_items(text){
 
 function storage_list(){
   chrome.storage.local.set({'list': main_words});
-
 }
 
 //On load

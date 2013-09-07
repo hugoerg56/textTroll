@@ -3,10 +3,28 @@
     <meta charset="utf-8">
     <title>popup</title>
     <script type="text/javascript" src="libs/jquery-1.9.1.min.js"></script>   
-    <script type="text/javascript" src="libs/underscore.min.js"></script>   
+    <script type="text/javascript" src="libs/underscore-min.js"></script>   
     <script type="text/javascript" src="libs/popup.js"></script>    
+    <style>
+      body{
+        width: 230px;
+      }
+      .content{
+        float: left;
+        margin-left: 10px;
+        margin-bottom: 30px;
+      }
+      .word{
+        cursor: pointer;
+        float: left;
+        width: 100%;
+        color: #005580;
+        margin-bottom: 4px;
+      }
+    </style>
   </head>
   <body style='background-color: white'>
-    <ul class='content'></ul>
+    <h4>Lista de Palabras disponibles:</h4>
+    <div class='content'></div>
   </body>
 </html>
