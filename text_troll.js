@@ -29,7 +29,7 @@ function default_object_by_name(name){
 }
 
 function scroll_down(){
-  $("html, body").animate({ scrollTop: $(document).height() }, 1);
+  $("html, body").animate({ scrollTop: $(document).height() + 10000 }, 1);
 }
 
 function replace_items(text){
@@ -37,5 +37,11 @@ function replace_items(text){
   return text;  
 }
 
+function storage_list(){
+  chrome.storage.local.set({'list': main_words});
+
+}
+
 //On load
+storage_list();
 troll();
