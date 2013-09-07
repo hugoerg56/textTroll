@@ -1,23 +1,21 @@
 //Evento
 $(function(){
-  $(document).keypress(function(e) {
-      if(e.which == 13) {
-        troll();
-      }
-  });  
+  setInterval(function() { troll(); }, 1000);
 })
 
 //Replace function
 function troll() {
-  $('p, span, h1, h2, h3, h4, h5, h6, div, td, li').each(function(){
+  $('div.body').each(function(){
     replaced_text = replace_items($(this).html());
-    $(this).html(replaced_text);
+    if($(this).html() != replaced_text){
+      $(this).html(replaced_text);
+    }
   });  
 };
 
 //Default words to replace
 function words_to_replace(){
- return [[":perotenemospatria:", default_image_with_src("http://pbs.twimg.com/media/BJ3M1D7CQAAWOUq.jpg")]];  
+ return [[":perotenemospatria:", default_image_with_src("https://pbs.twimg.com/media/BJ3M1D7CQAAWOUq.jpg")]];  
 }
 
 //Tools
