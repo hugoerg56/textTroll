@@ -11,16 +11,22 @@ function troll() {
       $(this).html(replaced_text);
     }
   });  
+  scroll_down();
 };
 
 //Default words to replace
 function words_to_replace(){
- return [[":perotenemospatria:", default_image_with_src("https://pbs.twimg.com/media/BJ3M1D7CQAAWOUq.jpg")]];  
+ return [[":perotenemospatria:", default_image_with_src("images/perotenemospatria.jpg")]];  
 }
 
 //Tools
 function default_image_with_src(src){
+  src = chrome.extension.getURL(src); 
   return "<img src="+ src +" />";
+}
+
+function scroll_down(){
+  $("html, body").animate({ scrollTop: $(document).height() }, 1);
 }
 
 function replace_items(text){
