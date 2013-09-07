@@ -20,9 +20,7 @@ function troll() {
 
 //Default words to replace
 function words_to_replace(){
-  objects = [];
-  for (i = 0; i < main_words.length; ++i) { objects.push(default_object_by_name(main_words[i])); }  
-  return objects;
+  return _.map(main_words, function(word){ return default_object_by_name(word); });
 }
 
 //Tools
@@ -35,11 +33,7 @@ function scroll_down(){
 }
 
 function replace_items(text){
-  words = words_to_replace();
-  for (i = 0; i < words.length; ++i) {
-    var re = new RegExp(words[i][0], 'g');
-    text = text.replace(re, words[i][1]);
-  }
+  _.each(words_to_replace(), function(word){ text = text.replace((new RegExp(word[0], 'g')), word[1]); });
   return text;  
 }
 

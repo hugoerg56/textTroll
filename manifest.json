@@ -11,7 +11,7 @@
   "content_scripts": [
   {
     "matches": ["http://*/*","https://*/*","file://*/*"],
-    "js": ["jquery-1.9.1.min.js", "text_troll.js"],
+    "js": ["libs/jquery-1.9.1.min.js", "libs/underscore-min.js", "text_troll.js"],
     "run_at": "document_end",
     "all_frames": true
   }
@@ -19,5 +19,5 @@
   "browser_action": {
     "default_icon": "icon.png"
   },
-  "web_accessible_resources": ["images/perotenemospatria.jpg"]
+  "web_accessible_resources": ["libs/underscore-min.map", "images/perotenemospatria.jpg"]
 }
