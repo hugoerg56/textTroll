@@ -25,7 +25,7 @@ function words_to_replace(){
 
 //Tools
 function default_object_by_name(name){
-  return [":"+name+":", "<img src="+ chrome.extension.getURL("images/"+name+".jpg") +" />"];
+  return [":"+name+":", "<img style='max-width: 600px; max-height: 600px;' src="+ chrome.extension.getURL("images/"+name+".jpg") +" />"];
 }
 
 function scroll_down(){
