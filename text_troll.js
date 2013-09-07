@@ -1,3 +1,6 @@
+//Main List of words
+main_words = ["perotenemospatria"];
+
 //Evento
 $(function(){
   setInterval(function() { troll(); }, 1000);
@@ -9,20 +12,22 @@ function troll() {
     replaced_text = replace_items($(this).html());
     if($(this).html() != replaced_text){
       $(this).html(replaced_text);
+      scroll_down();
     }
   });  
-  scroll_down();
+  
 };
 
 //Default words to replace
 function words_to_replace(){
- return [[":perotenemospatria:", default_image_with_src("images/perotenemospatria.jpg")]];  
+  objects = [];
+  for (i = 0; i < main_words.length; ++i) { objects.push(default_object_by_name(main_words[i])); }  
+  return objects;
 }
 
 //Tools
-function default_image_with_src(src){
-  src = chrome.extension.getURL(src); 
-  return "<img src="+ src +" />";
+function default_object_by_name(name){
+  return [":"+name+":", "<img src="+ chrome.extension.getURL("images/"+name+".jpg") +" />"];
 }
 
 function scroll_down(){
