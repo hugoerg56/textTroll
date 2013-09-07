@@ -1,5 +1,6 @@
 function copyTextToClipboard(text) {
   var copyFrom = $('<textarea/>');
+  copyFrom.className = 'hidden'
   copyFrom.text(text);
   $('body').append(copyFrom);
   copyFrom.select();
@@ -18,7 +19,7 @@ function div_for_word(word){
 function thumb_with_name(word){
   div_image = document.createElement('div');
   img_src = chrome.extension.getURL("images/"+word+".jpg");
-  div_image.innerHTML = "<img class='"+word+"' width='100%' src='"+ img_src +"'/>";
+  div_image.innerHTML = "<span></span><img class='"+word+"' src='"+ img_src +"'/>";
   div_image.className = 'preview';
   return div_image
 }
@@ -41,11 +42,19 @@ function add_image(word){
 }
 
 function expand_reduce_image_for(word){
-  ima = $('img.'+word).parent();
-  if(ima.css('width') == '30px' || ima.css('width') == undefined){
-    ima.css('width', '200px');
+  ima = $('img.'+word)
+  if(ima.css('max-width') == '30px' || ima.css('max-width') == undefined){
+    ima.css('max-width', '200px');
+    ima.css('max-height', '200px');
+    ima.parent().css('max-width', '200px');
+    ima.parent().css('max-height', '200px');    
+    ima.parent().css('margin-bottom', '200px');
   }else{
-    ima.css('width', '30px');   
+    ima.css('max-width', '30px');
+    ima.css('max-height', '30px');   
+    ima.parent().css('max-width', '30px');
+    ima.parent().css('max-height', '30px');   
+    ima.parent().css('margin-bottom', '0px');       
   }
 }
 

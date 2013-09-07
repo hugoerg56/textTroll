@@ -8,6 +8,10 @@
     <style>
       body{
         width: 250px;
+        font-family: Arial;
+        color: white;
+        overflow-x: hidden;
+        background-color: #262626;
       }
       .content{
         float: left;
@@ -21,23 +25,49 @@
       .cl{
         clear: both;
       }
+      .hidden{
+        display: none;
+      }
       .preview{
+        border-left: 2px solid #313131;
+        border-top: 2px solid #313131;
+        border-bottom: 2px solid #313131;                
+        background-color: #434343;
         cursor: pointer;
         float: left;
+        height: 30px;      /* equals max image height */
         width: 30px;
-        color: #005580;
-        margin-bottom: 4px;
+        text-align: center;
+      }
+      .preview span{
+        float: none;
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
+      .preview img{
+        max-width: 30px;
+        max-height: 30px;
+        vertical-align: middle;
       }
       .word{
+        border-right: 2px solid #313131;
+        border-top: 2px solid #313131;
+        border-bottom: 2px solid #313131;         
         cursor: pointer;
         float: left;
-        width: 200px;
-        color: #005580;
+        min-width: 175px;
+        max-width: 190px;
+        color: white;
         margin-bottom: 4px;
-        margin-left: 10px;
+        padding-left: 10px;
+        background-color: #434343;
+        height: 30;
       }
       .word img, span{
         float: left;
+        background-color: #434343;
+        vertical-align: middle;
       }
       .word img{
         margin-right: 10px;
@@ -47,7 +77,7 @@
       }
     </style>
   </head>
-  <body style='background-color: white'>
+  <body>
     <h4>Lista de Palabras disponibles:</h4>
     <div class='content'></div>
   </body>
