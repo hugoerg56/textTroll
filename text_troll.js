@@ -1,5 +1,5 @@
 //Main List of words
-main_words = ["perotenemospatria", "muaja"];
+main_words = ["perotenemospatria"];
 
 //Evento
 $(function(){
