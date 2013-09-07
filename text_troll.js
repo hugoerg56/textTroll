@@ -8,7 +8,7 @@ $(function(){
 
 //Replace function
 function troll() {
-  $('div.body').each(function(){
+  $('.chat div.body').each(function(){
     replaced_text = replace_items($(this).html());
     if($(this).html() != replaced_text){
       $(this).html(replaced_text);
