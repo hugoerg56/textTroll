@@ -1,5 +1,5 @@
 //Main List of words
-main_words = ["perotenemospatria", "doblefacepalm", "whyyouno", "yatusabes"];
+main_words = ["perotenemospatria", "doblefacepalm", "whyyouno", "yatusabes", "likeaboss"];
 
 //Evento
 $(function(){
