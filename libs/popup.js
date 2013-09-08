@@ -18,7 +18,7 @@ function div_for_word(word){
 
 function thumb_with_name(word){
   div_image = document.createElement('div');
-  img_src = chrome.extension.getURL("images/"+word+".jpg");
+  img_src = chrome.extension.getURL("images/"+word+".png");
   div_image.innerHTML = "<span></span><img class='"+word+"' src='"+ img_src +"'/>";
   div_image.className = 'preview';
   return div_image
