@@ -27,7 +27,7 @@ function words_to_replace(){
 
 //Tools
 function default_object_by_name(name){
-  return [":"+name+":", "<img style='max-width: 600px; max-height: 600px;' src="+ chrome.extension.getURL("images/"+name+".png") +" />"];
+  return [":"+name+":", "<img style='max-width: 100px; max-height: 100px;' src="+ chrome.extension.getURL("images/"+name+".png") +" />"];
 }
 
 function scroll_down(){
