@@ -10,7 +10,7 @@ $(function(){
 
 //Replace function
 function troll() {
-  $('.chat div.body, .kk span').each(function(){
+  $('.chat div.body, .nH span').each(function(){
     replaced_text = replace_items($(this).html());
     if($(this).html() != replaced_text){
       $(this).html(replaced_text);
