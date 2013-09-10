@@ -1,7 +1,7 @@
 //Main List of words
 main_words = ["perotenemospatria", "doblefacepalm", "yunot", "yatusabes", "likeaboss", "likeasir", "lol", "megusta",
               "obamahappy", "obamasad", "ohgodwhy", "okay", "seriously", "trolol", "venceremos", "winning", "yaoming",
-              "wat", "motherofgod", "omg", "muajaja"];
+              "wat", "motherofgod", "omg", "muajaja", "dude"];
 
 //Evento
 $(function(){
