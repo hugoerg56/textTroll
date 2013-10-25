@@ -24,7 +24,7 @@
 
   //Replace function
   function troll() {
-    $('.chat div.body, .nH span').each(function(){
+    $('.chat div.body, [role="chatMessage"] [dir="ltr"]').each(function(){
       var $this = $(this);
       replaced_text = replace_items($this.html());
       if($this.html() != replaced_text){
